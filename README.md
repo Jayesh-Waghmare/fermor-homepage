@@ -6,6 +6,16 @@ Live website: https://jayesh-waghmare.github.io/fermor-homepage/
 
 Source code: https://github.com/Jayesh-Waghmare/fermor-homepage
 
+## Screenshots
+
+Desktop view at 1440 pixels.
+
+![Fermor homepage on desktop](docs/screenshots/desktop.png)
+
+Mobile view at 390 pixels.
+
+<img src="docs/screenshots/mobile.png" alt="Fermor homepage on mobile" width="390" />
+
 ## Run the project
 
 Use Node.js 22.12 or later.
