@@ -67,3 +67,13 @@ The checks cover the dashboard, chart controls, goal calculations, planner valid
 The tests use an installed Google Chrome. To use Playwright's Chromium instead, run `npx playwright install chromium` and set `PLAYWRIGHT_CHANNEL=chromium`. Set `TEST_URL` to test another address. Screenshots are saved in `tmp/qa`, which is excluded from Git.
 
 Use `npm run format` to format the source.
+
+## Submission
+
+Share the live website and source code links at the top of this file. A short message is included in [SUBMISSION.txt](SUBMISSION.txt). Review it before sending it to the Fermor team.
+
+The source archive contains the project files, README, submission message, and browser checks. It excludes installed dependencies and Git history. After extracting it, run `npm ci` and `npm run dev`.
+
+The production archive contains the built website. Serve its contents through a static web server. Use the source project when you need to change the page.
+
+Generated archives are kept in `output` and are not committed to the repository.
