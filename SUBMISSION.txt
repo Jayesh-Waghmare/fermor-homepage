@@ -1,0 +1,18 @@
+Subject: Fermor Frontend Developer Assignment
+
+Hello Fermor team,
+
+Here is my completed homepage assignment.
+
+Live website: https://jayesh-waghmare.github.io/fermor-homepage/
+Source code: https://github.com/Jayesh-Waghmare/fermor-homepage
+
+The page starts with a sample financial overview, then introduces goals and a few practical money notes. The aim was to help visitors understand the idea quickly and give them something useful to try.
+
+It is built with React, Vite, and CSS. The dashboard tabs, goal calculator, savings planner, articles, FAQ, and mobile menu are interactive. The README covers setup, design decisions, and the scope of the demo.
+
+The layout was checked on desktop and mobile, including widths from 320 to 1440 pixels. The dashboard uses sample data, and the savings calculations do not assume investment returns.
+
+Thank you for reviewing the assignment.
+
+Jayesh Waghmare
