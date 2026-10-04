@@ -53,7 +53,7 @@ function navigateTabs(event) {
 }
 const goals = {
   cushion: {
-    label: 'A rainy-day fund',
+    label: 'A rainy day fund',
     icon: ShieldCheck,
     title: 'A little peace of mind.',
     description: 'An unexpected bill feels different when you have something set aside.',
@@ -74,7 +74,7 @@ const goals = {
     label: 'A place of your own',
     icon: Home,
     title: 'Your next chapter.',
-    description: 'Break a big down-payment goal into steps you can see and work towards.',
+    description: 'Break a big down payment goal into steps you can see and work towards.',
     total: 1000000,
     saved: 200000,
     color: '#d8e4e7',
@@ -259,18 +259,18 @@ function Dashboard() {
                   subtitle: '28 Sep · Income',
                   amount: '+ ₹65,000',
                 },
-                { icon: Home, title: 'Rent', subtitle: '01 Sep · Living', amount: '− ₹18,000' },
+                { icon: Home, title: 'Rent', subtitle: '01 Sep · Living', amount: '(₹18,000)' },
                 {
                   icon: Target,
-                  title: 'Rainy-day fund',
+                  title: 'Rainy day fund',
                   subtitle: '02 Sep · Goal contribution',
-                  amount: '− ₹12,000',
+                  amount: '(₹12,000)',
                 },
                 {
                   icon: Coffee,
-                  title: 'Coffee & catch-ups',
+                  title: 'Coffee with friends',
                   subtitle: '24 Sep · Eating out',
-                  amount: '− ₹640',
+                  amount: '(₹640)',
                 },
               ].map((a) => (
                 <div className="activity-row" key={a.title}>
@@ -363,7 +363,7 @@ const articles = [
     paragraphs: [
       'Start with four numbers: what comes in, what goes out, what you own, and what you owe. You can use a notebook, a spreadsheet, or a simple overview. The useful part is seeing everything together.',
       'Look at a typical month rather than your best one. Include bills that arrive once a year by setting aside a little each month. A clearer picture helps you spot commitments before they become surprises.',
-      'Once you have the picture, pick one thing to improve. You do not need to organise your entire financial life in an afternoon. A short check-in each month is a good place to begin.',
+      'Once you have the picture, pick one thing to improve. You do not need to organise your entire financial life in an afternoon. A quick review each month is a good place to begin.',
     ],
   },
   {
@@ -379,7 +379,7 @@ const articles = [
   },
   {
     label: 'SMALL FIRST STEPS',
-    title: 'A rainy-day fund is a good place to start.',
+    title: 'A rainy day fund is a good place to start.',
     time: '3 min read',
     theme: 'buffer',
     paragraphs: [
@@ -401,11 +401,11 @@ const faqs = [
   ],
   [
     'Can I connect my bank account here?',
-    'This is a frontend assignment concept, so the overview uses sample data. There are no bank connections, account sign-ups, or payments. The goal planner works with the numbers you enter, directly in your browser.',
+    'This is a frontend assignment concept, so the overview uses sample data. There are no bank connections, account registrations, or payments. The goal planner works with the numbers you enter, directly in your browser.',
   ],
   [
     'How does the goal planner work?',
-    'It subtracts your monthly expenses from your take-home income to show the amount available. You choose a monthly contribution, and it estimates how many months you need to reach your target. It assumes no interest or investment returns. Your inputs are not saved or sent to a server.',
+    'It subtracts your monthly expenses from your income after deductions to show the amount available. You choose a monthly contribution, and it estimates how many months you need to reach your target. It assumes no interest or investment returns. Your inputs are not saved or sent to a server.',
   ],
 ];
 
@@ -617,7 +617,7 @@ function App() {
                 </span>
                 <div>
                   <span>ONE MANAGEABLE NEXT STEP</span>
-                  <strong>Start your rainy-day fund</strong>
+                  <strong>Start your rainy day fund</strong>
                   <span className="action-pill">A little breathing room</span>
                 </div>
               </div>
@@ -661,8 +661,8 @@ function App() {
                 You’re <em>making room.</em>
               </h2>
               <p>
-                For a little security. A long-awaited trip. A front door with your name on it. Start
-                with something that matters to you.
+                For a little security. A trip you have been planning. A front door with your name on
+                it. Start with something that matters to you.
               </p>
               <div
                 className="goal-tabs"
@@ -888,7 +888,7 @@ function App() {
             <button className="button button-light" onClick={() => openModal('planner')}>
               Find my starting point <ArrowUpRight size={18} />
             </button>
-            <span className="closing-note">Try a simple plan. No sign-up needed.</span>
+            <span className="closing-note">Try a simple plan. No registration needed.</span>
           </div>
           <Sprout className="closing-sprout" strokeWidth={0.8} />
         </section>
@@ -913,7 +913,7 @@ function App() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Fermor homepage concept.</span>
-          <span>Built for the frontend assignment. Sample data, real interactions.</span>
+          <span>Built for the frontend assignment using sample data.</span>
         </div>
       </footer>
       <dialog
@@ -942,7 +942,7 @@ function App() {
             <form onSubmit={buildPlan}>
               <div className="form-grid">
                 <label>
-                  Monthly take-home income (₹)
+                  Monthly income after deductions (₹)
                   <input
                     autoFocus
                     required

@@ -1,10 +1,12 @@
 # Fermor homepage
 
-A new homepage for Fermor, built for the Frontend Developer Assignment.
+A React homepage built for the Fermor Frontend Developer Assignment.
 
-The idea is to make money feel less scattered. The page moves from a clear financial overview to one useful next step, then to goals and everyday habits. It is aimed at people who want to take better care of their finances without needing to become finance experts first.
+Live website: https://jayesh-waghmare.github.io/fermor-homepage/
 
-## Run locally
+Source code: https://github.com/Jayesh-Waghmare/fermor-homepage
+
+## Run the project
 
 Use Node.js 22.12 or later.
 
@@ -13,54 +15,55 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite. To check the production version:
+Open the address printed in the terminal. To build and preview the production version:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## What works
+## What the page does
 
-- The sample overview switches between net worth, goals, and recent activity. Its chart has three period views.
-- The goal section switches between a rainy-day fund, a trip, and a home. Moving the contribution slider changes the estimated time to the goal.
-- The main call to action opens a planner. It checks income, expenses, and the chosen contribution before calculating a savings timeline.
-- The money notes open readable articles. The questions expand individually, and the mobile navigation opens and closes.
-- Dialogs use the browser's native focus management and Escape-to-close behaviour. Buttons, inputs, and links have visible keyboard focus. Reduced-motion preferences are respected.
+The sample dashboard has views for net worth, goals, and recent activity. You can switch the chart period to see a different sample trend.
 
-## Design decisions
+The goals section lets you choose between an emergency fund, a trip, and a home. Changing the monthly contribution updates the time needed to reach the goal.
 
-I chose a warm cream background and a quiet green palette to give the page a calmer feel. Fraunces adds character to the headings; DM Sans keeps controls and numbers readable. Both fonts are bundled with the build, so the page does not depend on a font CDN.
+The main button opens a savings planner. Enter your income, expenses, target, and monthly contribution. The planner checks whether the contribution fits your budget and calculates the number of months needed.
 
-The dashboard is the main visual because it makes the promise concrete. The rest of the page gives visitors something to do: try a goal, read a short note, or make a simple plan. The illustrations are SVG and CSS, which keeps the page light and avoids stock photography that would add little to the story.
+The articles open in a reading window. The questions expand when selected, and the navigation has a menu on smaller screens. Tabs work with arrow keys, dialogs close with Escape, and keyboard focus stays visible.
 
-The content follows the assignment brief and Fermor's public description: understand, act, and grow. The [company's LinkedIn page](https://www.linkedin.com/company/fermor/) also describes bringing different parts of a financial life into one view. The layout, illustrations, and copy here are an independent interpretation. There are no invented customer quotes, adoption numbers, or claims about returns.
+## Why this layout
 
-## Scope
+The dashboard comes first so visitors can see what bringing their finances together might look like. The next sections explain the idea, let them try a goal, and offer a few practical reading notes.
 
-This is a frontend concept, not Fermor's live product. All dashboard balances and transactions are illustrative. The goal estimates use contributions only, with no interest, market returns, inflation, or fees. The planner starts from a zero balance. There is no authentication, bank connection, or payment flow, and form inputs are not stored or transmitted. Reloading the page resets them.
+Cream and green keep the page calm. Fraunces is used for headings and DM Sans for body text and controls. Both fonts are included in the build. The illustrations use SVG and CSS, so there are no external image requests.
 
-React handles the interactions, Vite builds the static site, plain CSS handles the layout, and Lucide provides the interface icons. No backend or environment variables are needed.
+The content follows the brief and [Fermor's public description](https://www.linkedin.com/company/fermor/). The layout is an independent interpretation. The page does not use customer quotes, adoption figures, or promises about investment returns.
+
+## What is included
+
+This is a frontend concept. The dashboard figures and transactions are examples. There are no bank connections, accounts, or payment services.
+
+The savings estimates assume regular contributions with no interest or investment returns. The planner starts from a zero balance. Inputs stay in the browser and are cleared when the page reloads.
+
+The project uses React, Vite, plain CSS, and Lucide icons. It needs no backend or environment variables.
 
 ## Deployment
 
-The included GitHub Actions workflow builds the page and deploys `dist/` to GitHub Pages on pushes to `main`. In the repository settings, select **GitHub Actions** as the Pages source. The relative asset base also supports deployment to a subdirectory. Netlify and Vercel can use `npm run build` with `dist` as the output directory.
+GitHub Actions builds the project and publishes the contents of `dist` to GitHub Pages when changes are pushed to `main`. GitHub Pages must use GitHub Actions as its source.
 
-## Submission links
+The relative asset paths also support hosting under a subdirectory. On Vercel or Netlify, use `npm run build` as the build command and `dist` as the output directory.
 
-- Source: https://github.com/Jayesh-Waghmare/fermor-homepage
-- Live homepage: https://jayesh-waghmare.github.io/fermor-homepage/
+## Browser checks
 
-## Checks
-
-The browser check covers the overview tabs and keyboard controls, chart periods, goal calculation, planner validation, dialog focus and Escape, articles, FAQ, and mobile navigation. It checks for horizontal overflow at 320, 375, 390, 680, 768, 1024, and 1440 pixels and fails on browser errors.
-
-Build the page and start `npm run preview`. In a second terminal, run:
+Build the project and run `npm run preview`. In another terminal, run:
 
 ```bash
 npm run test:e2e
 ```
 
-The check uses an installed Google Chrome by default. For Playwright's bundled Chromium, run `npx playwright install chromium` first, then set `PLAYWRIGHT_CHANNEL=chromium`. `TEST_URL` can point the check at a different preview URL. Screenshots are written to the ignored `tmp/qa/` directory.
+The checks cover the dashboard, chart controls, goal calculations, planner validation, dialogs, articles, questions, and mobile menu. They also check for browser errors and horizontal scrolling at widths from 320 to 1440 pixels.
 
-Run `npm run format` to format the source.
+The tests use an installed Google Chrome. To use Playwright's Chromium instead, run `npx playwright install chromium` and set `PLAYWRIGHT_CHANNEL=chromium`. Set `TEST_URL` to test another address. Screenshots are saved in `tmp/qa`, which is excluded from Git.
+
+Use `npm run format` to format the source.
